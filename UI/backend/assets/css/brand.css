@@ -1,0 +1,33 @@
+﻿.data-table > thead > tr > th:nth-child(2) {
+    width: 3%;
+}
+.data-table > thead > tr > th:nth-child(3) {
+    width: 30%;
+}
+.data-table > thead > tr > th:nth-child(4) {
+    width: 4%;
+}
+.data-table > thead > tr > th:nth-child(5) {
+    width: 30%;
+}
+.data-table > thead > tr > th:nth-child(6) {
+    width: 10%;
+}
+.data-table > tbody > tr > td:nth-child(4) > div {
+    width: 75px;
+    height: 75px;
+    border: 1px solid #adadad;
+    margin: 0 auto;
+    position: relative;
+}
+.data-table > tbody > tr > td:nth-child(4) > div > a > img {
+    max-width: 100%;
+    max-height: 100%;
+    margin: auto;
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    z-index: 1;
+}

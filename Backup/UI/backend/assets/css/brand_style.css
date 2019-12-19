@@ -1,0 +1,44 @@
+﻿.gv-list-brands-header > th:nth-child(1) {
+    width: 3%;
+}
+.gv-list-brands-header > th:nth-child(2) {
+    width: 20%;
+}
+.gv-list-brands-header > th:nth-child(3) {
+    width: 15%;
+}
+.gv-list-brands-header > th:nth-child(4) {
+    width: 39%;
+}
+.gv-list-brands-header > th:nth-child(7) {
+    width: 7%;
+}
+.gv-list-brands-header > th:nth-child(6) {
+    width: 11%;
+}
+.gv-list-brands-header > th:nth-child(5) {
+    width: 5%;
+}
+.gv-list-brands-row > td:nth-child(4) {
+    text-align: left;
+}
+.gv-list-brands-row > td:nth-child(3) > a {
+    display: flex;
+    align-items: center;
+}
+.gv-list-brands-row > td:nth-child(3) > a > img {
+    width: 30%;
+    margin: 0 auto;
+}
+.gv-list-brands-row > td:nth-child(3) > .row label {
+    white-space: nowrap;
+    overflow: hidden;
+    text-align: left;
+}
+.gv-list-brands-row {
+    cursor: pointer;
+    transition: all .2s;
+}
+.gv-list-brands-row:hover {
+    background: #d8e0e9!important;
+}

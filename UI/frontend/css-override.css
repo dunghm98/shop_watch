@@ -1,0 +1,16 @@
+.product-img {
+    position: relative;
+    display: block;
+    margin-bottom: 20px;
+    width: 270px;
+    height: 330px;
+    border: 1px solid #f6f6f6;
+}
+.product-img a img.primary-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    margin: auto;
+}

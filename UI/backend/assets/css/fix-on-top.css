@@ -1,0 +1,9 @@
+﻿.fixed {
+    position: fixed;
+    width: calc(100% - 250px);
+    top: 0;
+    z-index: 1;
+}
+.action-nav {
+    background: #fefefe; border-bottom: 1px solid #dee2e6; border-top: 1px solid #dee2e6;
+}

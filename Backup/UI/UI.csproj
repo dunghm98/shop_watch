@@ -1,0 +1,833 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{57E85F77-CBA7-4F00-AFC9-4B9603B2E3A0}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>UI</RootNamespace>
+    <AssemblyName>UI</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <UseIISExpress>false</UseIISExpress>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="BCrypt.Net, Version=0.1.4141.31969, Culture=neutral, PublicKeyToken=f3bc8f8c31beeb49, processorArchitecture=MSIL">
+      <HintPath>..\packages\BCrypt.Net.0.1.0\lib\net35\BCrypt.Net.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="Newtonsoft.Json">
+      <HintPath>..\packages\Json120r3\net40\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="backend\assets\css\brand.css" />
+    <Content Include="backend\assets\css\brand_style.css" />
+    <Content Include="backend\assets\css\data-tablecss.css" />
+    <Content Include="backend\assets\css\dropdown_box.css" />
+    <Content Include="backend\assets\css\fix-on-top.css" />
+    <Content Include="backend\assets\css\loading.css" />
+    <Content Include="backend\assets\css\ltc.css" />
+    <Content Include="backend\assets\css\search-box.css" />
+    <Content Include="backend\assets\css\sweet_switch.css" />
+    <Content Include="backend\assets\css\upload_img.css" />
+    <Content Include="backend\assets\images\icons\check-square.png" />
+    <Content Include="backend\assets\images\icons\check-square.svg" />
+    <Content Include="backend\assets\js\brand.js" />
+    <Content Include="backend\assets\js\data-table.js" />
+    <Content Include="backend\assets\js\dropdown_box.js" />
+    <Content Include="backend\assets\js\fix-on-top.js" />
+    <Content Include="backend\assets\js\insert-form.js" />
+    <Content Include="backend\assets\js\ltc.js" />
+    <Content Include="backend\assets\js\product.js" />
+    <Content Include="backend\assets\js\search-box.js" />
+    <Content Include="backend\assets\js\upload_img.js" />
+    <Content Include="backend\assets\plugins\adminlte\adminlte.min.css" />
+    <Content Include="backend\assets\plugins\animate.min.css" />
+    <Content Include="backend\assets\plugins\bootstrap-switch\css\bootstrap2\bootstrap-switch.css" />
+    <Content Include="backend\assets\plugins\bootstrap-switch\css\bootstrap2\bootstrap-switch.min.css" />
+    <Content Include="backend\assets\plugins\bootstrap-switch\css\bootstrap3\bootstrap-switch.css" />
+    <Content Include="backend\assets\plugins\bootstrap-switch\css\bootstrap3\bootstrap-switch.min.css" />
+    <Content Include="backend\assets\plugins\bootstrap-switch\js\bootstrap-switch.js" />
+    <Content Include="backend\assets\plugins\bootstrap-switch\js\bootstrap-switch.min.js" />
+    <Content Include="backend\assets\plugins\bs-custom-file-input\bs-custom-file-input.min.js" />
+    <Content Include="backend\assets\plugins\jquery.validate.min.js" />
+    <Content Include="backend\assets\plugins\pretty-checkbox.min.css" />
+    <Content Include="backend\assets\plugins\select2-bootstrap4-theme\select2-bootstrap4.css" />
+    <Content Include="backend\assets\plugins\select2-bootstrap4-theme\select2-bootstrap4.min.css" />
+    <Content Include="backend\assets\plugins\select2\css\select2.css" />
+    <Content Include="backend\assets\plugins\select2\css\select2.min.css" />
+    <Content Include="backend\assets\plugins\select2\js\i18n\af.js" />
+    <Content Include="backend\assets\plugins\select2\js\i18n\ar.js" />
+    <Content Include="backend\assets\plugins\select2\js\i18n\az.js" />
+    <Content Include="backend\assets\plugins\select2\js\i18n\bg.js" />
+    <Content Include="backend\assets\plugins\select2\js\i18n\bn.js" />
+    <Content Include="backend\assets\plugins\select2\js\i18n\bs.js" />
+    <Content Include="backend\assets\plugins\select2\js\i18n\build.txt" />
+    <Content Include="backend\assets\plugins\select2\js\i18n\ca.js" />
+    <Content Include="backend\assets\plugins\select2\js\i18n\cs.js" />
+    <Content Include="backend\assets\plugins\select2\js\i18n\da.js" />
+    <Content Include="backend\assets\plugins\select2\js\i18n\de.js" />
+    <Content Include="backend\assets\plugins\select2\js\i18n\dsb.js" />
+    <Content Include="backend\assets\plugins\select2\js\i18n\el.js" />
+    <Content Include="backend\assets\plugins\select2\js\i18n\en.js" />
+    <Content Include="backend\assets\plugins\select2\js\i18n\es.js" />
+    <Content Include="backend\assets\plugins\select2\js\i18n\et.js" />
+    <Content Include="backend\assets\plugins\select2\js\i18n\eu.js" />
+    <Content Include="backend\assets\plugins\select2\js\i18n\fa.js" />
+    <Content Include="backend\assets\plugins\select2\js\i18n\fi.js" />
+    <Content Include="backend\assets\plugins\select2\js\i18n\fr.js" />
+    <Content Include="backend\assets\plugins\select2\js\i18n\gl.js" />
+    <Content Include="backend\assets\plugins\select2\js\i18n\he.js" />
+    <Content Include="backend\assets\plugins\select2\js\i18n\hi.js" />
+    <Content Include="backend\assets\plugins\select2\js\i18n\hr.js" />
+    <Content Include="backend\assets\plugins\select2\js\i18n\hsb.js" />
+    <Content Include="backend\assets\plugins\select2\js\i18n\hu.js" />
+    <Content Include="backend\assets\plugins\select2\js\i18n\hy.js" />
+    <Content Include="backend\assets\plugins\select2\js\i18n\id.js" />
+    <Content Include="backend\assets\plugins\select2\js\i18n\is.js" />
+    <Content Include="backend\assets\plugins\select2\js\i18n\it.js" />
+    <Content Include="backend\assets\plugins\select2\js\i18n\ja.js" />
+    <Content Include="backend\assets\plugins\select2\js\i18n\ka.js" />
+    <Content Include="backend\assets\plugins\select2\js\i18n\km.js" />
+    <Content Include="backend\assets\plugins\select2\js\i18n\ko.js" />
+    <Content Include="backend\assets\plugins\select2\js\i18n\lt.js" />
+    <Content Include="backend\assets\plugins\select2\js\i18n\lv.js" />
+    <Content Include="backend\assets\plugins\select2\js\i18n\mk.js" />
+    <Content Include="backend\assets\plugins\select2\js\i18n\ms.js" />
+    <Content Include="backend\assets\plugins\select2\js\i18n\nb.js" />
+    <Content Include="backend\assets\plugins\select2\js\i18n\ne.js" />
+    <Content Include="backend\assets\plugins\select2\js\i18n\nl.js" />
+    <Content Include="backend\assets\plugins\select2\js\i18n\pl.js" />
+    <Content Include="backend\assets\plugins\select2\js\i18n\ps.js" />
+    <Content Include="backend\assets\plugins\select2\js\i18n\pt-BR.js" />
+    <Content Include="backend\assets\plugins\select2\js\i18n\pt.js" />
+    <Content Include="backend\assets\plugins\select2\js\i18n\ro.js" />
+    <Content Include="backend\assets\plugins\select2\js\i18n\ru.js" />
+    <Content Include="backend\assets\plugins\select2\js\i18n\sk.js" />
+    <Content Include="backend\assets\plugins\select2\js\i18n\sl.js" />
+    <Content Include="backend\assets\plugins\select2\js\i18n\sq.js" />
+    <Content Include="backend\assets\plugins\select2\js\i18n\sr-Cyrl.js" />
+    <Content Include="backend\assets\plugins\select2\js\i18n\sr.js" />
+    <Content Include="backend\assets\plugins\select2\js\i18n\sv.js" />
+    <Content Include="backend\assets\plugins\select2\js\i18n\th.js" />
+    <Content Include="backend\assets\plugins\select2\js\i18n\tk.js" />
+    <Content Include="backend\assets\plugins\select2\js\i18n\tr.js" />
+    <Content Include="backend\assets\plugins\select2\js\i18n\uk.js" />
+    <Content Include="backend\assets\plugins\select2\js\i18n\vi.js" />
+    <Content Include="backend\assets\plugins\select2\js\i18n\zh-CN.js" />
+    <Content Include="backend\assets\plugins\select2\js\i18n\zh-TW.js" />
+    <Content Include="backend\assets\plugins\select2\js\select2.full.js" />
+    <Content Include="backend\assets\plugins\select2\js\select2.full.min.js" />
+    <Content Include="backend\assets\plugins\select2\js\select2.js" />
+    <Content Include="backend\assets\plugins\select2\js\select2.min.js" />
+    <Content Include="backend\assets\plugins\summernote\lang\summernote-ar-AR.js" />
+    <Content Include="backend\assets\plugins\summernote\lang\summernote-ar-AR.min.js" />
+    <Content Include="backend\assets\plugins\summernote\lang\summernote-bg-BG.js" />
+    <Content Include="backend\assets\plugins\summernote\lang\summernote-bg-BG.min.js" />
+    <Content Include="backend\assets\plugins\summernote\lang\summernote-ca-ES.js" />
+    <Content Include="backend\assets\plugins\summernote\lang\summernote-ca-ES.min.js" />
+    <Content Include="backend\assets\plugins\summernote\lang\summernote-cs-CZ.js" />
+    <Content Include="backend\assets\plugins\summernote\lang\summernote-cs-CZ.min.js" />
+    <Content Include="backend\assets\plugins\summernote\lang\summernote-da-DK.js" />
+    <Content Include="backend\assets\plugins\summernote\lang\summernote-da-DK.min.js" />
+    <Content Include="backend\assets\plugins\summernote\lang\summernote-de-DE.js" />
+    <Content Include="backend\assets\plugins\summernote\lang\summernote-de-DE.min.js" />
+    <Content Include="backend\assets\plugins\summernote\lang\summernote-el-GR.js" />
+    <Content Include="backend\assets\plugins\summernote\lang\summernote-el-GR.min.js" />
+    <Content Include="backend\assets\plugins\summernote\lang\summernote-es-ES.js" />
+    <Content Include="backend\assets\plugins\summernote\lang\summernote-es-ES.min.js" />
+    <Content Include="backend\assets\plugins\summernote\lang\summernote-es-EU.js" />
+    <Content Include="backend\assets\plugins\summernote\lang\summernote-es-EU.min.js" />
+    <Content Include="backend\assets\plugins\summernote\lang\summernote-fa-IR.js" />
+    <Content Include="backend\assets\plugins\summernote\lang\summernote-fa-IR.min.js" />
+    <Content Include="backend\assets\plugins\summernote\lang\summernote-fi-FI.js" />
+    <Content Include="backend\assets\plugins\summernote\lang\summernote-fi-FI.min.js" />
+    <Content Include="backend\assets\plugins\summernote\lang\summernote-fr-FR.js" />
+    <Content Include="backend\assets\plugins\summernote\lang\summernote-fr-FR.min.js" />
+    <Content Include="backend\assets\plugins\summernote\lang\summernote-gl-ES.js" />
+    <Content Include="backend\assets\plugins\summernote\lang\summernote-gl-ES.min.js" />
+    <Content Include="backend\assets\plugins\summernote\lang\summernote-he-IL.js" />
+    <Content Include="backend\assets\plugins\summernote\lang\summernote-he-IL.min.js" />
+    <Content Include="backend\assets\plugins\summernote\lang\summernote-hr-HR.js" />
+    <Content Include="backend\assets\plugins\summernote\lang\summernote-hr-HR.min.js" />
+    <Content Include="backend\assets\plugins\summernote\lang\summernote-hu-HU.js" />
+    <Content Include="backend\assets\plugins\summernote\lang\summernote-hu-HU.min.js" />
+    <Content Include="backend\assets\plugins\summernote\lang\summernote-id-ID.js" />
+    <Content Include="backend\assets\plugins\summernote\lang\summernote-id-ID.min.js" />
+    <Content Include="backend\assets\plugins\summernote\lang\summernote-it-IT.js" />
+    <Content Include="backend\assets\plugins\summernote\lang\summernote-it-IT.min.js" />
+    <Content Include="backend\assets\plugins\summernote\lang\summernote-ja-JP.js" />
+    <Content Include="backend\assets\plugins\summernote\lang\summernote-ja-JP.min.js" />
+    <Content Include="backend\assets\plugins\summernote\lang\summernote-ko-KR.js" />
+    <Content Include="backend\assets\plugins\summernote\lang\summernote-ko-KR.min.js" />
+    <Content Include="backend\assets\plugins\summernote\lang\summernote-lt-LT.js" />
+    <Content Include="backend\assets\plugins\summernote\lang\summernote-lt-LT.min.js" />
+    <Content Include="backend\assets\plugins\summernote\lang\summernote-lt-LV.js" />
+    <Content Include="backend\assets\plugins\summernote\lang\summernote-lt-LV.min.js" />
+    <Content Include="backend\assets\plugins\summernote\lang\summernote-mn-MN.js" />
+    <Content Include="backend\assets\plugins\summernote\lang\summernote-mn-MN.min.js" />
+    <Content Include="backend\assets\plugins\summernote\lang\summernote-nb-NO.js" />
+    <Content Include="backend\assets\plugins\summernote\lang\summernote-nb-NO.min.js" />
+    <Content Include="backend\assets\plugins\summernote\lang\summernote-nl-NL.js" />
+    <Content Include="backend\assets\plugins\summernote\lang\summernote-nl-NL.min.js" />
+    <Content Include="backend\assets\plugins\summernote\lang\summernote-pl-PL.js" />
+    <Content Include="backend\assets\plugins\summernote\lang\summernote-pl-PL.min.js" />
+    <Content Include="backend\assets\plugins\summernote\lang\summernote-pt-BR.js" />
+    <Content Include="backend\assets\plugins\summernote\lang\summernote-pt-BR.min.js" />
+    <Content Include="backend\assets\plugins\summernote\lang\summernote-pt-PT.js" />
+    <Content Include="backend\assets\plugins\summernote\lang\summernote-pt-PT.min.js" />
+    <Content Include="backend\assets\plugins\summernote\lang\summernote-ro-RO.js" />
+    <Content Include="backend\assets\plugins\summernote\lang\summernote-ro-RO.min.js" />
+    <Content Include="backend\assets\plugins\summernote\lang\summernote-ru-RU.js" />
+    <Content Include="backend\assets\plugins\summernote\lang\summernote-ru-RU.min.js" />
+    <Content Include="backend\assets\plugins\summernote\lang\summernote-sk-SK.js" />
+    <Content Include="backend\assets\plugins\summernote\lang\summernote-sk-SK.min.js" />
+    <Content Include="backend\assets\plugins\summernote\lang\summernote-sl-SI.js" />
+    <Content Include="backend\assets\plugins\summernote\lang\summernote-sl-SI.min.js" />
+    <Content Include="backend\assets\plugins\summernote\lang\summernote-sr-RS-Latin.js" />
+    <Content Include="backend\assets\plugins\summernote\lang\summernote-sr-RS-Latin.min.js" />
+    <Content Include="backend\assets\plugins\summernote\lang\summernote-sr-RS.js" />
+    <Content Include="backend\assets\plugins\summernote\lang\summernote-sr-RS.min.js" />
+    <Content Include="backend\assets\plugins\summernote\lang\summernote-sv-SE.js" />
+    <Content Include="backend\assets\plugins\summernote\lang\summernote-sv-SE.min.js" />
+    <Content Include="backend\assets\plugins\summernote\lang\summernote-ta-IN.js" />
+    <Content Include="backend\assets\plugins\summernote\lang\summernote-ta-IN.min.js" />
+    <Content Include="backend\assets\plugins\summernote\lang\summernote-th-TH.js" />
+    <Content Include="backend\assets\plugins\summernote\lang\summernote-th-TH.min.js" />
+    <Content Include="backend\assets\plugins\summernote\lang\summernote-tr-TR.js" />
+    <Content Include="backend\assets\plugins\summernote\lang\summernote-tr-TR.min.js" />
+    <Content Include="backend\assets\plugins\summernote\lang\summernote-uk-UA.js" />
+    <Content Include="backend\assets\plugins\summernote\lang\summernote-uk-UA.min.js" />
+    <Content Include="backend\assets\plugins\summernote\lang\summernote-uz-UZ.js" />
+    <Content Include="backend\assets\plugins\summernote\lang\summernote-uz-UZ.min.js" />
+    <Content Include="backend\assets\plugins\summernote\lang\summernote-vi-VN.js" />
+    <Content Include="backend\assets\plugins\summernote\lang\summernote-vi-VN.min.js" />
+    <Content Include="backend\assets\plugins\summernote\lang\summernote-zh-CN.js" />
+    <Content Include="backend\assets\plugins\summernote\lang\summernote-zh-CN.min.js" />
+    <Content Include="backend\assets\plugins\summernote\lang\summernote-zh-TW.js" />
+    <Content Include="backend\assets\plugins\summernote\lang\summernote-zh-TW.min.js" />
+    <Content Include="backend\assets\plugins\summernote\summernote-bs4.css" />
+    <Content Include="backend\assets\plugins\summernote\summernote-bs4.js" />
+    <Content Include="backend\assets\plugins\summernote\summernote-bs4.min.js" />
+    <Content Include="backend\assets\plugins\summernote\summernote-lite.css" />
+    <Content Include="backend\assets\plugins\summernote\summernote-lite.js" />
+    <Content Include="backend\assets\plugins\summernote\summernote-lite.min.js" />
+    <Content Include="backend\assets\plugins\summernote\summernote.css" />
+    <Content Include="backend\assets\plugins\summernote\summernote.js" />
+    <Content Include="backend\assets\plugins\summernote\summernote.min.js" />
+    <Content Include="backend\assets\plugins\sweetalert2\dist\sweetalert2.all.js" />
+    <Content Include="backend\assets\plugins\sweetalert2\dist\sweetalert2.all.min.js" />
+    <Content Include="backend\assets\plugins\sweetalert2\dist\sweetalert2.css" />
+    <Content Include="backend\assets\plugins\sweetalert2\dist\sweetalert2.js" />
+    <Content Include="backend\assets\plugins\sweetalert2\dist\sweetalert2.min.css" />
+    <Content Include="backend\assets\plugins\sweetalert2\dist\sweetalert2.min.js" />
+    <Content Include="backend\assets\plugins\sweetalert2\src\constants.js" />
+    <Content Include="backend\assets\plugins\sweetalert2\src\globalState.js" />
+    <Content Include="backend\assets\plugins\sweetalert2\src\instanceMethods.js" />
+    <Content Include="backend\assets\plugins\sweetalert2\src\instanceMethods\buttons-handlers.js" />
+    <Content Include="backend\assets\plugins\sweetalert2\src\instanceMethods\close.js" />
+    <Content Include="backend\assets\plugins\sweetalert2\src\instanceMethods\enable-disable-elements.js" />
+    <Content Include="backend\assets\plugins\sweetalert2\src\instanceMethods\getInput.js" />
+    <Content Include="backend\assets\plugins\sweetalert2\src\instanceMethods\hideLoading.js" />
+    <Content Include="backend\assets\plugins\sweetalert2\src\instanceMethods\keydown-handler.js" />
+    <Content Include="backend\assets\plugins\sweetalert2\src\instanceMethods\popup-click-handler.js" />
+    <Content Include="backend\assets\plugins\sweetalert2\src\instanceMethods\progress-steps.js" />
+    <Content Include="backend\assets\plugins\sweetalert2\src\instanceMethods\show-reset-validation-error.js" />
+    <Content Include="backend\assets\plugins\sweetalert2\src\instanceMethods\update.js" />
+    <Content Include="backend\assets\plugins\sweetalert2\src\instanceMethods\_main.js" />
+    <Content Include="backend\assets\plugins\sweetalert2\src\privateMethods.js" />
+    <Content Include="backend\assets\plugins\sweetalert2\src\privateProps.js" />
+    <Content Include="backend\assets\plugins\sweetalert2\src\staticMethods.js" />
+    <Content Include="backend\assets\plugins\sweetalert2\src\staticMethods\argsToParams.js" />
+    <Content Include="backend\assets\plugins\sweetalert2\src\staticMethods\dom.js" />
+    <Content Include="backend\assets\plugins\sweetalert2\src\staticMethods\fire.js" />
+    <Content Include="backend\assets\plugins\sweetalert2\src\staticMethods\mixin.js" />
+    <Content Include="backend\assets\plugins\sweetalert2\src\staticMethods\queue.js" />
+    <Content Include="backend\assets\plugins\sweetalert2\src\staticMethods\showLoading.js" />
+    <Content Include="backend\assets\plugins\sweetalert2\src\staticMethods\timer.js" />
+    <Content Include="backend\assets\plugins\sweetalert2\src\SweetAlert.js" />
+    <Content Include="backend\assets\plugins\sweetalert2\src\sweetalert2.js" />
+    <Content Include="backend\assets\plugins\sweetalert2\src\utils\aria.js" />
+    <Content Include="backend\assets\plugins\sweetalert2\src\utils\classes.js" />
+    <Content Include="backend\assets\plugins\sweetalert2\src\utils\defaultInputValidators.js" />
+    <Content Include="backend\assets\plugins\sweetalert2\src\utils\DismissReason.js" />
+    <Content Include="backend\assets\plugins\sweetalert2\src\utils\dom\animationEndEvent.js" />
+    <Content Include="backend\assets\plugins\sweetalert2\src\utils\dom\domUtils.js" />
+    <Content Include="backend\assets\plugins\sweetalert2\src\utils\dom\getters.js" />
+    <Content Include="backend\assets\plugins\sweetalert2\src\utils\dom\index.js" />
+    <Content Include="backend\assets\plugins\sweetalert2\src\utils\dom\init.js" />
+    <Content Include="backend\assets\plugins\sweetalert2\src\utils\dom\inputUtils.js" />
+    <Content Include="backend\assets\plugins\sweetalert2\src\utils\dom\measureScrollbar.js" />
+    <Content Include="backend\assets\plugins\sweetalert2\src\utils\dom\parseHtmlToContainer.js" />
+    <Content Include="backend\assets\plugins\sweetalert2\src\utils\dom\renderers\render.js" />
+    <Content Include="backend\assets\plugins\sweetalert2\src\utils\dom\renderers\renderActions.js" />
+    <Content Include="backend\assets\plugins\sweetalert2\src\utils\dom\renderers\renderCloseButton.js" />
+    <Content Include="backend\assets\plugins\sweetalert2\src\utils\dom\renderers\renderContainer.js" />
+    <Content Include="backend\assets\plugins\sweetalert2\src\utils\dom\renderers\renderContent.js" />
+    <Content Include="backend\assets\plugins\sweetalert2\src\utils\dom\renderers\renderFooter.js" />
+    <Content Include="backend\assets\plugins\sweetalert2\src\utils\dom\renderers\renderHeader.js" />
+    <Content Include="backend\assets\plugins\sweetalert2\src\utils\dom\renderers\renderIcon.js" />
+    <Content Include="backend\assets\plugins\sweetalert2\src\utils\dom\renderers\renderImage.js" />
+    <Content Include="backend\assets\plugins\sweetalert2\src\utils\dom\renderers\renderInput.js" />
+    <Content Include="backend\assets\plugins\sweetalert2\src\utils\dom\renderers\renderPopup.js" />
+    <Content Include="backend\assets\plugins\sweetalert2\src\utils\dom\renderers\renderProgressSteps.js" />
+    <Content Include="backend\assets\plugins\sweetalert2\src\utils\dom\renderers\renderTitle.js" />
+    <Content Include="backend\assets\plugins\sweetalert2\src\utils\ieFix.js" />
+    <Content Include="backend\assets\plugins\sweetalert2\src\utils\iosFix.js" />
+    <Content Include="backend\assets\plugins\sweetalert2\src\utils\isNodeEnv.js" />
+    <Content Include="backend\assets\plugins\sweetalert2\src\utils\openPopup.js" />
+    <Content Include="backend\assets\plugins\sweetalert2\src\utils\params.js" />
+    <Content Include="backend\assets\plugins\sweetalert2\src\utils\scrollbarFix.js" />
+    <Content Include="backend\assets\plugins\sweetalert2\src\utils\setParameters.js" />
+    <Content Include="backend\assets\plugins\sweetalert2\src\utils\Timer.js" />
+    <Content Include="backend\assets\plugins\sweetalert2\src\utils\utils.js" />
+    <Content Include="backend\assets\plugins\sweetalert2\sweetalert2.d.ts" />
+    <Content Include="backend\Login.aspx" />
+    <Content Include="backend\assets\images\AdminLTELogo.png" />
+    <Content Include="backend\assets\images\logo-shopwatch.png" />
+    <Content Include="backend\assets\images\user5-128x128.jpg" />
+    <Content Include="backend\assets\plugins\adminlte\adminlte.js" />
+    <Content Include="backend\assets\plugins\adminlte\demo.js" />
+    <Content Include="backend\assets\plugins\bootstrap\js\bootstrap.bundle.js" />
+    <Content Include="backend\assets\plugins\bootstrap\js\bootstrap.bundle.min.js" />
+    <Content Include="backend\assets\plugins\bootstrap\js\bootstrap.js" />
+    <Content Include="backend\assets\plugins\bootstrap\js\bootstrap.min.js" />
+    <Content Include="backend\assets\plugins\daterangepicker\daterangepicker.css" />
+    <Content Include="backend\assets\plugins\daterangepicker\daterangepicker.js" />
+    <Content Include="backend\assets\plugins\daterangepicker\drp.png" />
+    <Content Include="backend\assets\plugins\daterangepicker\example\amd\index.html" />
+    <Content Include="backend\assets\plugins\daterangepicker\example\amd\main.js" />
+    <Content Include="backend\assets\plugins\daterangepicker\example\amd\require.js" />
+    <Content Include="backend\assets\plugins\daterangepicker\example\browserify\bundle.js" />
+    <Content Include="backend\assets\plugins\daterangepicker\example\browserify\index.html" />
+    <Content Include="backend\assets\plugins\daterangepicker\example\browserify\main.js" />
+    <Content Include="backend\assets\plugins\daterangepicker\moment.min.js" />
+    <Content Include="backend\assets\plugins\daterangepicker\package.js" />
+    <Content Include="backend\assets\plugins\daterangepicker\website.css" />
+    <Content Include="backend\assets\plugins\daterangepicker\website.js" />
+    <Content Include="backend\assets\plugins\daterangepicker\website\index.html" />
+    <Content Include="backend\assets\plugins\daterangepicker\website\website.css" />
+    <Content Include="backend\assets\plugins\daterangepicker\website\website.js" />
+    <Content Include="backend\assets\plugins\fontawesome-free\css\all.css" />
+    <Content Include="backend\assets\plugins\fontawesome-free\css\all.min.css" />
+    <Content Include="backend\assets\plugins\fontawesome-free\css\brands.css" />
+    <Content Include="backend\assets\plugins\fontawesome-free\css\brands.min.css" />
+    <Content Include="backend\assets\plugins\fontawesome-free\css\fontawesome.css" />
+    <Content Include="backend\assets\plugins\fontawesome-free\css\fontawesome.min.css" />
+    <Content Include="backend\assets\plugins\fontawesome-free\css\regular.css" />
+    <Content Include="backend\assets\plugins\fontawesome-free\css\regular.min.css" />
+    <Content Include="backend\assets\plugins\fontawesome-free\css\solid.css" />
+    <Content Include="backend\assets\plugins\fontawesome-free\css\solid.min.css" />
+    <Content Include="backend\assets\plugins\fontawesome-free\css\svg-with-js.css" />
+    <Content Include="backend\assets\plugins\fontawesome-free\css\svg-with-js.min.css" />
+    <Content Include="backend\assets\plugins\fontawesome-free\css\v4-shims.css" />
+    <Content Include="backend\assets\plugins\fontawesome-free\css\v4-shims.min.css" />
+    <Content Include="backend\assets\plugins\fontawesome-free\webfonts\fa-brands-400.svg" />
+    <Content Include="backend\assets\plugins\fontawesome-free\webfonts\fa-regular-400.svg" />
+    <Content Include="backend\assets\plugins\fontawesome-free\webfonts\fa-solid-900.svg" />
+    <Content Include="backend\assets\plugins\ggfonts\source-sans-pro\source-sans-pro.css" />
+    <Content Include="backend\assets\plugins\icheck-bootstrap\icheck-bootstrap.css" />
+    <Content Include="backend\assets\plugins\icheck-bootstrap\icheck-bootstrap.min.css" />
+    <Content Include="backend\assets\plugins\ionicons\css\ionicons.min.css" />
+    <Content Include="backend\assets\plugins\ionicons\fonts\ionicons.svg" />
+    <Content Include="backend\assets\plugins\jquery-ui\AUTHORS.txt" />
+    <Content Include="backend\assets\plugins\jquery-ui\external\jquery\jquery.js" />
+    <Content Include="backend\assets\plugins\jquery-ui\images\ui-icons_444444_256x240.png" />
+    <Content Include="backend\assets\plugins\jquery-ui\images\ui-icons_555555_256x240.png" />
+    <Content Include="backend\assets\plugins\jquery-ui\images\ui-icons_777620_256x240.png" />
+    <Content Include="backend\assets\plugins\jquery-ui\images\ui-icons_777777_256x240.png" />
+    <Content Include="backend\assets\plugins\jquery-ui\images\ui-icons_cc0000_256x240.png" />
+    <Content Include="backend\assets\plugins\jquery-ui\images\ui-icons_ffffff_256x240.png" />
+    <Content Include="backend\assets\plugins\jquery-ui\jquery-ui.css" />
+    <Content Include="backend\assets\plugins\jquery-ui\jquery-ui.js" />
+    <Content Include="backend\assets\plugins\jquery-ui\jquery-ui.min.css" />
+    <Content Include="backend\assets\plugins\jquery-ui\jquery-ui.min.js" />
+    <Content Include="backend\assets\plugins\jquery-ui\jquery-ui.structure.css" />
+    <Content Include="backend\assets\plugins\jquery-ui\jquery-ui.structure.min.css" />
+    <Content Include="backend\assets\plugins\jquery-ui\jquery-ui.theme.css" />
+    <Content Include="backend\assets\plugins\jquery-ui\jquery-ui.theme.min.css" />
+    <Content Include="backend\assets\plugins\jquery-ui\LICENSE.txt" />
+    <Content Include="backend\assets\plugins\jquery\core.js" />
+    <Content Include="backend\assets\plugins\jquery\jquery.js" />
+    <Content Include="backend\assets\plugins\jquery\jquery.min.js" />
+    <Content Include="backend\assets\plugins\jquery\jquery.slim.js" />
+    <Content Include="backend\assets\plugins\jquery\jquery.slim.min.js" />
+    <Content Include="backend\assets\plugins\moment\locales.js" />
+    <Content Include="backend\assets\plugins\moment\locales.min.js" />
+    <Content Include="backend\assets\plugins\moment\locale\af.js" />
+    <Content Include="backend\assets\plugins\moment\locale\ar-dz.js" />
+    <Content Include="backend\assets\plugins\moment\locale\ar-kw.js" />
+    <Content Include="backend\assets\plugins\moment\locale\ar-ly.js" />
+    <Content Include="backend\assets\plugins\moment\locale\ar-ma.js" />
+    <Content Include="backend\assets\plugins\moment\locale\ar-sa.js" />
+    <Content Include="backend\assets\plugins\moment\locale\ar-tn.js" />
+    <Content Include="backend\assets\plugins\moment\locale\ar.js" />
+    <Content Include="backend\assets\plugins\moment\locale\az.js" />
+    <Content Include="backend\assets\plugins\moment\locale\be.js" />
+    <Content Include="backend\assets\plugins\moment\locale\bg.js" />
+    <Content Include="backend\assets\plugins\moment\locale\bm.js" />
+    <Content Include="backend\assets\plugins\moment\locale\bn.js" />
+    <Content Include="backend\assets\plugins\moment\locale\bo.js" />
+    <Content Include="backend\assets\plugins\moment\locale\br.js" />
+    <Content Include="backend\assets\plugins\moment\locale\bs.js" />
+    <Content Include="backend\assets\plugins\moment\locale\ca.js" />
+    <Content Include="backend\assets\plugins\moment\locale\cs.js" />
+    <Content Include="backend\assets\plugins\moment\locale\cv.js" />
+    <Content Include="backend\assets\plugins\moment\locale\cy.js" />
+    <Content Include="backend\assets\plugins\moment\locale\da.js" />
+    <Content Include="backend\assets\plugins\moment\locale\de-at.js" />
+    <Content Include="backend\assets\plugins\moment\locale\de-ch.js" />
+    <Content Include="backend\assets\plugins\moment\locale\de.js" />
+    <Content Include="backend\assets\plugins\moment\locale\dv.js" />
+    <Content Include="backend\assets\plugins\moment\locale\el.js" />
+    <Content Include="backend\assets\plugins\moment\locale\en-au.js" />
+    <Content Include="backend\assets\plugins\moment\locale\en-ca.js" />
+    <Content Include="backend\assets\plugins\moment\locale\en-gb.js" />
+    <Content Include="backend\assets\plugins\moment\locale\en-ie.js" />
+    <Content Include="backend\assets\plugins\moment\locale\en-il.js" />
+    <Content Include="backend\assets\plugins\moment\locale\en-nz.js" />
+    <Content Include="backend\assets\plugins\moment\locale\en-SG.js" />
+    <Content Include="backend\assets\plugins\moment\locale\eo.js" />
+    <Content Include="backend\assets\plugins\moment\locale\es-do.js" />
+    <Content Include="backend\assets\plugins\moment\locale\es-us.js" />
+    <Content Include="backend\assets\plugins\moment\locale\es.js" />
+    <Content Include="backend\assets\plugins\moment\locale\et.js" />
+    <Content Include="backend\assets\plugins\moment\locale\eu.js" />
+    <Content Include="backend\assets\plugins\moment\locale\fa.js" />
+    <Content Include="backend\assets\plugins\moment\locale\fi.js" />
+    <Content Include="backend\assets\plugins\moment\locale\fo.js" />
+    <Content Include="backend\assets\plugins\moment\locale\fr-ca.js" />
+    <Content Include="backend\assets\plugins\moment\locale\fr-ch.js" />
+    <Content Include="backend\assets\plugins\moment\locale\fr.js" />
+    <Content Include="backend\assets\plugins\moment\locale\fy.js" />
+    <Content Include="backend\assets\plugins\moment\locale\ga.js" />
+    <Content Include="backend\assets\plugins\moment\locale\gd.js" />
+    <Content Include="backend\assets\plugins\moment\locale\gl.js" />
+    <Content Include="backend\assets\plugins\moment\locale\gom-latn.js" />
+    <Content Include="backend\assets\plugins\moment\locale\gu.js" />
+    <Content Include="backend\assets\plugins\moment\locale\he.js" />
+    <Content Include="backend\assets\plugins\moment\locale\hi.js" />
+    <Content Include="backend\assets\plugins\moment\locale\hr.js" />
+    <Content Include="backend\assets\plugins\moment\locale\hu.js" />
+    <Content Include="backend\assets\plugins\moment\locale\hy-am.js" />
+    <Content Include="backend\assets\plugins\moment\locale\id.js" />
+    <Content Include="backend\assets\plugins\moment\locale\is.js" />
+    <Content Include="backend\assets\plugins\moment\locale\it-ch.js" />
+    <Content Include="backend\assets\plugins\moment\locale\it.js" />
+    <Content Include="backend\assets\plugins\moment\locale\ja.js" />
+    <Content Include="backend\assets\plugins\moment\locale\jv.js" />
+    <Content Include="backend\assets\plugins\moment\locale\ka.js" />
+    <Content Include="backend\assets\plugins\moment\locale\kk.js" />
+    <Content Include="backend\assets\plugins\moment\locale\km.js" />
+    <Content Include="backend\assets\plugins\moment\locale\kn.js" />
+    <Content Include="backend\assets\plugins\moment\locale\ko.js" />
+    <Content Include="backend\assets\plugins\moment\locale\ku.js" />
+    <Content Include="backend\assets\plugins\moment\locale\ky.js" />
+    <Content Include="backend\assets\plugins\moment\locale\lb.js" />
+    <Content Include="backend\assets\plugins\moment\locale\lo.js" />
+    <Content Include="backend\assets\plugins\moment\locale\lt.js" />
+    <Content Include="backend\assets\plugins\moment\locale\lv.js" />
+    <Content Include="backend\assets\plugins\moment\locale\me.js" />
+    <Content Include="backend\assets\plugins\moment\locale\mi.js" />
+    <Content Include="backend\assets\plugins\moment\locale\mk.js" />
+    <Content Include="backend\assets\plugins\moment\locale\ml.js" />
+    <Content Include="backend\assets\plugins\moment\locale\mn.js" />
+    <Content Include="backend\assets\plugins\moment\locale\mr.js" />
+    <Content Include="backend\assets\plugins\moment\locale\ms-my.js" />
+    <Content Include="backend\assets\plugins\moment\locale\ms.js" />
+    <Content Include="backend\assets\plugins\moment\locale\mt.js" />
+    <Content Include="backend\assets\plugins\moment\locale\my.js" />
+    <Content Include="backend\assets\plugins\moment\locale\nb.js" />
+    <Content Include="backend\assets\plugins\moment\locale\ne.js" />
+    <Content Include="backend\assets\plugins\moment\locale\nl-be.js" />
+    <Content Include="backend\assets\plugins\moment\locale\nl.js" />
+    <Content Include="backend\assets\plugins\moment\locale\nn.js" />
+    <Content Include="backend\assets\plugins\moment\locale\pa-in.js" />
+    <Content Include="backend\assets\plugins\moment\locale\pl.js" />
+    <Content Include="backend\assets\plugins\moment\locale\pt-br.js" />
+    <Content Include="backend\assets\plugins\moment\locale\pt.js" />
+    <Content Include="backend\assets\plugins\moment\locale\ro.js" />
+    <Content Include="backend\assets\plugins\moment\locale\ru.js" />
+    <Content Include="backend\assets\plugins\moment\locale\sd.js" />
+    <Content Include="backend\assets\plugins\moment\locale\se.js" />
+    <Content Include="backend\assets\plugins\moment\locale\si.js" />
+    <Content Include="backend\assets\plugins\moment\locale\sk.js" />
+    <Content Include="backend\assets\plugins\moment\locale\sl.js" />
+    <Content Include="backend\assets\plugins\moment\locale\sq.js" />
+    <Content Include="backend\assets\plugins\moment\locale\sr-cyrl.js" />
+    <Content Include="backend\assets\plugins\moment\locale\sr.js" />
+    <Content Include="backend\assets\plugins\moment\locale\ss.js" />
+    <Content Include="backend\assets\plugins\moment\locale\sv.js" />
+    <Content Include="backend\assets\plugins\moment\locale\sw.js" />
+    <Content Include="backend\assets\plugins\moment\locale\ta.js" />
+    <Content Include="backend\assets\plugins\moment\locale\te.js" />
+    <Content Include="backend\assets\plugins\moment\locale\tet.js" />
+    <Content Include="backend\assets\plugins\moment\locale\tg.js" />
+    <Content Include="backend\assets\plugins\moment\locale\th.js" />
+    <Content Include="backend\assets\plugins\moment\locale\tl-ph.js" />
+    <Content Include="backend\assets\plugins\moment\locale\tlh.js" />
+    <Content Include="backend\assets\plugins\moment\locale\tr.js" />
+    <Content Include="backend\assets\plugins\moment\locale\tzl.js" />
+    <Content Include="backend\assets\plugins\moment\locale\tzm-latn.js" />
+    <Content Include="backend\assets\plugins\moment\locale\tzm.js" />
+    <Content Include="backend\assets\plugins\moment\locale\ug-cn.js" />
+    <Content Include="backend\assets\plugins\moment\locale\uk.js" />
+    <Content Include="backend\assets\plugins\moment\locale\ur.js" />
+    <Content Include="backend\assets\plugins\moment\locale\uz-latn.js" />
+    <Content Include="backend\assets\plugins\moment\locale\uz.js" />
+    <Content Include="backend\assets\plugins\moment\locale\vi.js" />
+    <Content Include="backend\assets\plugins\moment\locale\x-pseudo.js" />
+    <Content Include="backend\assets\plugins\moment\locale\yo.js" />
+    <Content Include="backend\assets\plugins\moment\locale\zh-cn.js" />
+    <Content Include="backend\assets\plugins\moment\locale\zh-hk.js" />
+    <Content Include="backend\assets\plugins\moment\locale\zh-tw.js" />
+    <Content Include="backend\assets\plugins\moment\moment-with-locales.js" />
+    <Content Include="backend\assets\plugins\moment\moment-with-locales.min.js" />
+    <Content Include="backend\assets\plugins\moment\moment.min.js" />
+    <Content Include="backend\assets\plugins\overlayScrollbars\css\OverlayScrollbars.css" />
+    <Content Include="backend\assets\plugins\overlayScrollbars\css\OverlayScrollbars.min.css" />
+    <Content Include="backend\assets\plugins\overlayScrollbars\js\jquery.overlayScrollbars.js" />
+    <Content Include="backend\assets\plugins\overlayScrollbars\js\jquery.overlayScrollbars.min.js" />
+    <Content Include="backend\assets\plugins\overlayScrollbars\js\OverlayScrollbars.js" />
+    <Content Include="backend\assets\plugins\overlayScrollbars\js\OverlayScrollbars.min.js" />
+    <Content Include="backend\assets\plugins\tempusdominus-bootstrap-4\css\tempusdominus-bootstrap-4.css" />
+    <Content Include="backend\assets\plugins\tempusdominus-bootstrap-4\css\tempusdominus-bootstrap-4.min.css" />
+    <Content Include="backend\assets\plugins\tempusdominus-bootstrap-4\js\tempusdominus-bootstrap-4.js" />
+    <Content Include="backend\assets\plugins\tempusdominus-bootstrap-4\js\tempusdominus-bootstrap-4.min.js" />
+    <Content Include="backend\layout\ControlSidebar.ascx" />
+    <Content Include="backend\layout\Footer.ascx" />
+    <Content Include="backend\layout\MainSidebar.ascx" />
+    <Content Include="backend\layout\Navbar.ascx" />
+    <Content Include="backend\Dashboard.aspx" />
+    <Content Include="backend\ChangePassword.aspx" />
+    <Content Include="backend\ShopInfo.aspx" />
+    <Content Include="backend\OpenBox.aspx" />
+    <Content Include="backend\CategoryManagement.aspx" />
+    <Content Include="backend\Product.aspx" />
+    <Content Include="backend\Brand.aspx" />
+    <Content Include="backend\NewProduct.aspx" />
+    <Content Include="backend\ProductDetail.aspx" />
+    <Content Include="backend\NewBrand.aspx" />
+    <Content Include="backend\BrandDetail.aspx" />
+    <Content Include="backend\WebService.asmx" />
+    <Content Include="Default.aspx" />
+    <Content Include="Global.asax" />
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+    <Content Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="backend\Auth.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="backend\Login.aspx.cs">
+      <DependentUpon>Login.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="backend\Login.aspx.designer.cs">
+      <DependentUpon>Login.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="backend\App.Master.cs">
+      <DependentUpon>App.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="backend\App.Master.designer.cs">
+      <DependentUpon>App.Master</DependentUpon>
+    </Compile>
+    <Compile Include="backend\layout\ControlSidebar.ascx.cs">
+      <DependentUpon>ControlSidebar.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="backend\layout\ControlSidebar.ascx.designer.cs">
+      <DependentUpon>ControlSidebar.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="backend\layout\Footer.ascx.cs">
+      <DependentUpon>Footer.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="backend\layout\Footer.ascx.designer.cs">
+      <DependentUpon>Footer.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="backend\layout\MainSidebar.ascx.cs">
+      <DependentUpon>MainSidebar.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="backend\layout\MainSidebar.ascx.designer.cs">
+      <DependentUpon>MainSidebar.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="backend\layout\Navbar.ascx.cs">
+      <DependentUpon>Navbar.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="backend\layout\Navbar.ascx.designer.cs">
+      <DependentUpon>Navbar.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="backend\Dashboard.aspx.cs">
+      <DependentUpon>Dashboard.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="backend\Dashboard.aspx.designer.cs">
+      <DependentUpon>Dashboard.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="backend\ChangePassword.aspx.cs">
+      <DependentUpon>ChangePassword.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="backend\ChangePassword.aspx.designer.cs">
+      <DependentUpon>ChangePassword.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="backend\ShopInfo.aspx.cs">
+      <DependentUpon>ShopInfo.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="backend\ShopInfo.aspx.designer.cs">
+      <DependentUpon>ShopInfo.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="backend\OpenBox.aspx.cs">
+      <DependentUpon>OpenBox.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="backend\OpenBox.aspx.designer.cs">
+      <DependentUpon>OpenBox.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="backend\CategoryManagement.aspx.cs">
+      <DependentUpon>CategoryManagement.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="backend\CategoryManagement.aspx.designer.cs">
+      <DependentUpon>CategoryManagement.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="backend\Product.aspx.cs">
+      <DependentUpon>Product.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="backend\Product.aspx.designer.cs">
+      <DependentUpon>Product.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="backend\Brand.aspx.cs">
+      <DependentUpon>Brand.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="backend\Brand.aspx.designer.cs">
+      <DependentUpon>Brand.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="backend\NewProduct.aspx.cs">
+      <DependentUpon>NewProduct.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="backend\NewProduct.aspx.designer.cs">
+      <DependentUpon>NewProduct.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="backend\ProductDetail.aspx.cs">
+      <DependentUpon>ProductDetail.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="backend\ProductDetail.aspx.designer.cs">
+      <DependentUpon>ProductDetail.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="backend\NewBrand.aspx.cs">
+      <DependentUpon>NewBrand.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="backend\NewBrand.aspx.designer.cs">
+      <DependentUpon>NewBrand.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="backend\BrandDetail.aspx.cs">
+      <DependentUpon>BrandDetail.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="backend\BrandDetail.aspx.designer.cs">
+      <DependentUpon>BrandDetail.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="backend\UpdateBrandLogo.ashx.cs">
+      <DependentUpon>UpdateBrandLogo.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="backend\WebHandler.ashx.cs">
+      <DependentUpon>WebHandler.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="backend\WebService.asmx.cs">
+      <DependentUpon>WebService.asmx</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Default.aspx.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Default.aspx.designer.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Global.asax.cs">
+      <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="Helper.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="backend\assets\images\products\" />
+    <Folder Include="frontend\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="backend\App.Master" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="backend\assets\plugins\bootstrap\js\bootstrap.bundle.js.map" />
+    <None Include="backend\assets\plugins\bootstrap\js\bootstrap.bundle.min.js.map" />
+    <None Include="backend\assets\plugins\bootstrap\js\bootstrap.js.map" />
+    <None Include="backend\assets\plugins\bootstrap\js\bootstrap.min.js.map" />
+    <None Include="backend\assets\plugins\daterangepicker\bower.json" />
+    <None Include="backend\assets\plugins\daterangepicker\example\browserify\README.md" />
+    <None Include="backend\assets\plugins\fontawesome-free\webfonts\fa-brands-400.eot" />
+    <None Include="backend\assets\plugins\fontawesome-free\webfonts\fa-brands-400.ttf" />
+    <None Include="backend\assets\plugins\fontawesome-free\webfonts\fa-brands-400.woff" />
+    <None Include="backend\assets\plugins\fontawesome-free\webfonts\fa-brands-400.woff2" />
+    <None Include="backend\assets\plugins\fontawesome-free\webfonts\fa-regular-400.eot" />
+    <None Include="backend\assets\plugins\fontawesome-free\webfonts\fa-regular-400.ttf" />
+    <None Include="backend\assets\plugins\fontawesome-free\webfonts\fa-regular-400.woff" />
+    <None Include="backend\assets\plugins\fontawesome-free\webfonts\fa-regular-400.woff2" />
+    <None Include="backend\assets\plugins\fontawesome-free\webfonts\fa-solid-900.eot" />
+    <None Include="backend\assets\plugins\fontawesome-free\webfonts\fa-solid-900.ttf" />
+    <None Include="backend\assets\plugins\fontawesome-free\webfonts\fa-solid-900.woff" />
+    <None Include="backend\assets\plugins\fontawesome-free\webfonts\fa-solid-900.woff2" />
+    <None Include="backend\assets\plugins\ggfonts\source-sans-pro\6xK1dSBYKcSV-LCoeQqfX1RYOo3qPZ7jsDJT9g.woff2" />
+    <None Include="backend\assets\plugins\ggfonts\source-sans-pro\6xK1dSBYKcSV-LCoeQqfX1RYOo3qPZ7ksDJT9g.woff2" />
+    <None Include="backend\assets\plugins\ggfonts\source-sans-pro\6xK1dSBYKcSV-LCoeQqfX1RYOo3qPZ7nsDI.woff2" />
+    <None Include="backend\assets\plugins\ggfonts\source-sans-pro\6xK1dSBYKcSV-LCoeQqfX1RYOo3qPZ7osDJT9g.woff2" />
+    <None Include="backend\assets\plugins\ggfonts\source-sans-pro\6xK1dSBYKcSV-LCoeQqfX1RYOo3qPZ7psDJT9g.woff2" />
+    <None Include="backend\assets\plugins\ggfonts\source-sans-pro\6xK1dSBYKcSV-LCoeQqfX1RYOo3qPZ7qsDJT9g.woff2" />
+    <None Include="backend\assets\plugins\ggfonts\source-sans-pro\6xK1dSBYKcSV-LCoeQqfX1RYOo3qPZ7rsDJT9g.woff2" />
+    <None Include="backend\assets\plugins\ggfonts\source-sans-pro\6xK3dSBYKcSV-LCoeQqfX1RYOo3qN67lqDY.woff2" />
+    <None Include="backend\assets\plugins\ggfonts\source-sans-pro\6xK3dSBYKcSV-LCoeQqfX1RYOo3qNa7lqDY.woff2" />
+    <None Include="backend\assets\plugins\ggfonts\source-sans-pro\6xK3dSBYKcSV-LCoeQqfX1RYOo3qNK7lqDY.woff2" />
+    <None Include="backend\assets\plugins\ggfonts\source-sans-pro\6xK3dSBYKcSV-LCoeQqfX1RYOo3qNq7lqDY.woff2" />
+    <None Include="backend\assets\plugins\ggfonts\source-sans-pro\6xK3dSBYKcSV-LCoeQqfX1RYOo3qO67lqDY.woff2" />
+    <None Include="backend\assets\plugins\ggfonts\source-sans-pro\6xK3dSBYKcSV-LCoeQqfX1RYOo3qOK7l.woff2" />
+    <None Include="backend\assets\plugins\ggfonts\source-sans-pro\6xK3dSBYKcSV-LCoeQqfX1RYOo3qPK7lqDY.woff2" />
+    <None Include="backend\assets\plugins\ggfonts\source-sans-pro\6xKydSBYKcSV-LCoeQqfX1RYOo3ig4vwkxduz8A.woff2" />
+    <None Include="backend\assets\plugins\ggfonts\source-sans-pro\6xKydSBYKcSV-LCoeQqfX1RYOo3ig4vwlBduz8A.woff2" />
+    <None Include="backend\assets\plugins\ggfonts\source-sans-pro\6xKydSBYKcSV-LCoeQqfX1RYOo3ig4vwlxdu.woff2" />
+    <None Include="backend\assets\plugins\ggfonts\source-sans-pro\6xKydSBYKcSV-LCoeQqfX1RYOo3ig4vwmBduz8A.woff2" />
+    <None Include="backend\assets\plugins\ggfonts\source-sans-pro\6xKydSBYKcSV-LCoeQqfX1RYOo3ig4vwmhduz8A.woff2" />
+    <None Include="backend\assets\plugins\ggfonts\source-sans-pro\6xKydSBYKcSV-LCoeQqfX1RYOo3ig4vwmRduz8A.woff2" />
+    <None Include="backend\assets\plugins\ggfonts\source-sans-pro\6xKydSBYKcSV-LCoeQqfX1RYOo3ig4vwmxduz8A.woff2" />
+    <None Include="backend\assets\plugins\ggfonts\source-sans-pro\6xKydSBYKcSV-LCoeQqfX1RYOo3ik4zwkxduz8A.woff2" />
+    <None Include="backend\assets\plugins\ggfonts\source-sans-pro\6xKydSBYKcSV-LCoeQqfX1RYOo3ik4zwlBduz8A.woff2" />
+    <None Include="backend\assets\plugins\ggfonts\source-sans-pro\6xKydSBYKcSV-LCoeQqfX1RYOo3ik4zwlxdu.woff2" />
+    <None Include="backend\assets\plugins\ggfonts\source-sans-pro\6xKydSBYKcSV-LCoeQqfX1RYOo3ik4zwmBduz8A.woff2" />
+    <None Include="backend\assets\plugins\ggfonts\source-sans-pro\6xKydSBYKcSV-LCoeQqfX1RYOo3ik4zwmhduz8A.woff2" />
+    <None Include="backend\assets\plugins\ggfonts\source-sans-pro\6xKydSBYKcSV-LCoeQqfX1RYOo3ik4zwmRduz8A.woff2" />
+    <None Include="backend\assets\plugins\ggfonts\source-sans-pro\6xKydSBYKcSV-LCoeQqfX1RYOo3ik4zwmxduz8A.woff2" />
+    <None Include="backend\assets\plugins\icheck-bootstrap\LICENSE" />
+    <None Include="backend\assets\plugins\ionicons\fonts\ionicons.eot" />
+    <None Include="backend\assets\plugins\ionicons\fonts\ionicons.ttf" />
+    <None Include="backend\assets\plugins\ionicons\fonts\ionicons.woff" />
+    <None Include="backend\assets\plugins\ionicons\fonts\ionicons.woff2" />
+    <None Include="backend\assets\plugins\jquery\jquery.min.map" />
+    <None Include="backend\assets\plugins\jquery\jquery.slim.min.map" />
+    <Content Include="packages.config" />
+    <None Include="backend\assets\plugins\summernote\font\summernote.eot" />
+    <None Include="backend\assets\plugins\summernote\font\summernote.ttf" />
+    <None Include="backend\assets\plugins\summernote\font\summernote.woff" />
+    <None Include="backend\assets\plugins\summernote\summernote-bs4.js.map" />
+    <None Include="backend\assets\plugins\summernote\summernote-lite.js.map" />
+    <None Include="backend\assets\plugins\summernote\summernote.js.map" />
+    <None Include="backend\assets\plugins\sweetalert2\CHANGELOG.md" />
+    <None Include="backend\assets\plugins\sweetalert2\LICENSE" />
+    <None Include="backend\assets\plugins\sweetalert2\package.json" />
+    <None Include="backend\assets\plugins\sweetalert2\README.md" />
+    <None Include="backend\assets\plugins\sweetalert2\src\scss\_animations.scss" />
+    <None Include="backend\assets\plugins\sweetalert2\src\scss\_body.scss" />
+    <None Include="backend\assets\plugins\sweetalert2\src\scss\_core.scss" />
+    <None Include="backend\assets\plugins\sweetalert2\src\scss\_mixins.scss" />
+    <None Include="backend\assets\plugins\sweetalert2\src\scss\_polyfills.scss" />
+    <None Include="backend\assets\plugins\sweetalert2\src\scss\_theming.scss" />
+    <None Include="backend\assets\plugins\sweetalert2\src\scss\_toasts-animations.scss" />
+    <None Include="backend\assets\plugins\sweetalert2\src\scss\_toasts-body.scss" />
+    <None Include="backend\assets\plugins\sweetalert2\src\scss\_toasts.scss" />
+    <None Include="backend\assets\plugins\sweetalert2\src\sweetalert2.scss" />
+    <None Include="backend\assets\plugins\sweetalert2\src\variables.scss" />
+    <Content Include="backend\WebHandler.ashx" />
+    <Content Include="backend\UpdateBrandLogo.ashx" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\BUSs\BUSs.csproj">
+      <Project>{F56E9DE0-F3FD-4BB4-85F3-03AE3D7AFC5D}</Project>
+      <Name>BUSs</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\DTOs\DTOs.csproj">
+      <Project>{82E4F69C-C367-4E7A-912A-4AE7E3CC44A4}</Project>
+      <Name>DTOs</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>False</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>51108</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>
+          </IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

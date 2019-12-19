@@ -1,0 +1,114 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="App.master.cs" Inherits="UI.backend.App" %>
+
+<!-- Register uc -->
+<%@ Register Src="~/backend/layout/Navbar.ascx" TagName="Navbar" TagPrefix="Navbar_UC" %>
+<%@ Register Src="~/backend/layout/MainSidebar.ascx" TagName="MainSidebar" TagPrefix="MainSidebar_UC" %>
+<%@ Register Src="~/backend/layout/Footer.ascx" TagName="Footer" TagPrefix="Footer_UC" %>
+<%@ Register Src="~/backend/layout/ControlSidebar.ascx" TagName="ControlSidebar"
+    TagPrefix="ControlSidebar_UC" %>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title>
+        <asp:ContentPlaceHolder ID="head_title" runat="server">
+        </asp:ContentPlaceHolder>
+    </title>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- Asset -->
+    <!-- Font Awesome 5 -->
+    <link href="assets/plugins/fontawesome-free/css/all.css" rel="stylesheet" type="text/css" />
+    <!-- Ionicons -->
+	<link href="assets/plugins/ionicons/css/ionicons.min.css" rel="stylesheet" type="text/css" />
+    <!-- Tempusdominus Bbootstrap 4 -->
+    <!-- <link href="assets/plugins/tempusdominus-bootstrap-4/css/tempusdominus-bootstrap-4.min.css"
+        rel="stylesheet" type="text/css" /> -->
+    <!-- iCheck -->
+    <link href="assets/plugins/icheck-bootstrap/icheck-bootstrap.min.css" rel="stylesheet"
+        type="text/css" />
+    <!-- JQVMap -->
+    <!-- Theme style -->
+    <link href="assets/plugins/adminlte/adminlte.min.css" rel="stylesheet" type="text/css" />
+    <!-- overlayScrollbars -->
+    <link href="assets/plugins/overlayScrollbars/css/OverlayScrollbars.min.css" rel="stylesheet"
+        type="text/css" />
+    <!-- Daterange picker -->
+    <link href="assets/plugins/daterangepicker/daterangepicker.css" rel="stylesheet"
+        type="text/css" />
+    <!-- Google Font: Source Sans Pro -->
+    <link href="assets/plugins/ggfonts/source-sans-pro/source-sans-pro.css" rel="stylesheet"
+        type="text/css" />
+    <link href="assets/plugins/sweetalert2/dist/sweetalert2.min.css" rel="stylesheet"
+        type="text/css" />
+    <link href="assets/css/ltc.css" rel="stylesheet" type="text/css" />
+	<link href="assets/css/loading.css" rel="stylesheet" type="text/css" />
+    <!-- jQuery -->
+    <script src="<%:HttpContext.Current.Request.Url.Segments[0]+"backend/" %>assets/plugins/jquery/jquery.min.js" type="text/javascript"></script>
+    <!-- jQuery Validate -->
+    <script src="<%:HttpContext.Current.Request.Url.Segments[0]+"backend/" %>assets/plugins/jquery.validate.min.js" type="text/javascript"></script>
+    <script src="<%:HttpContext.Current.Request.Url.Segments[0]+"backend/" %>assets/plugins/sweetalert2/dist/sweetalert2.min.js" type="text/javascript"></script>
+    <!-- App script ltc-->
+    <script src="<%:HttpContext.Current.Request.Url.Segments[0]+"backend/" %>assets/js/ltc.js" type="text/javascript"></script>
+    
+    <asp:ContentPlaceHolder ID="head_script" runat="server"></asp:ContentPlaceHolder>
+</head>
+<body class="hold-transition sidebar-mini layout-fixed">
+    <div class="wrapper">
+        <form id="app" runat="server">
+        <!-- Navbar -->
+        <Navbar_UC:Navbar ID="app_navbar" runat="server" />
+        <!-- / END .navbar -->
+        <!-- Main Sidebar Container -->
+        <MainSidebar_UC:MainSidebar ID="app_mainSidebar" runat="server" />
+        <!-- ./ END Main Sidebar Container -->
+        <!-- Content Wrapper. Contains page content -->
+        <div class="content-wrapper">
+            <asp:ContentPlaceHolder ID="main_content" runat="server">
+                Main content here
+            </asp:ContentPlaceHolder>
+        </div>
+        <!-- /.content-wrapper -->
+        <!-- Footer -->
+        <Footer_UC:Footer ID="app_footer" runat="server" />
+        <!-- ./ END Footer -->
+        <!-- Control Sidebar -->
+        <ControlSidebar_UC:ControlSidebar ID="app_controlSidebar" runat="server" />
+        <!-- /.control-sidebar -->
+        </form>
+    </div>
+	<!-- Loading Layer LTC -->
+	<div class="loading-layer">
+		<div class="loader-16"></div>
+		<div class="loading-text">loading...</div>
+	</div>
+	<!-- ./ End  Loading Layer -->
+    <!-- ./end wrapper -->
+    <!-- jQuery UI 1.11.4 -->
+    <script src="<%:HttpContext.Current.Request.Url.Segments[0]+"backend/" %>assets/plugins/jquery-ui/jquery-ui.min.js" type="text/javascript"></script>
+    <!-- Resolve conflict in jQuery UI tooltip with Bootstrap tooltip -->
+    <script type="text/javascript">
+        $.widget.bridge('uibutton', $.ui.button)
+    </script>
+    <!-- Bootstrap 4 -->
+    <script src="<%:HttpContext.Current.Request.Url.Segments[0]+"backend/" %>assets/plugins/bootstrap/js/bootstrap.bundle.min.js" type="text/javascript"></script>
+    <!-- ChartJS -->
+    <!-- Sparkline -->
+    <!-- JQVMap -->
+    <!-- jQuery Knob Chart -->
+    <!-- daterangepicker -->
+    <script src="<%:HttpContext.Current.Request.Url.Segments[0]+"backend/" %>assets/plugins/moment/moment.min.js" type="text/javascript"></script>
+    <script src="<%:HttpContext.Current.Request.Url.Segments[0]+"backend/" %>assets/plugins/daterangepicker/daterangepicker.js" type="text/javascript"></script>
+    <!-- Tempusdominus Bootstrap 4 -->
+    <!-- overlayScrollbars -->
+    <script src="<%:HttpContext.Current.Request.Url.Segments[0]+"backend/" %>assets/plugins/overlayScrollbars/js/jquery.overlayScrollbars.min.js"
+        type="text/javascript"></script>
+    <!-- AdminLTE App -->
+    <script src="<%:HttpContext.Current.Request.Url.Segments[0]+"backend/" %>assets/plugins/adminlte/adminlte.js" type="text/javascript"></script>
+    <!-- AdminLTE for demo purposes -->
+    <script src="<%:HttpContext.Current.Request.Url.Segments[0]+"backend/" %>assets/plugins/adminlte/demo.js" type="text/javascript"></script>
+    <asp:ContentPlaceHolder ID="script_content" runat="server">
+        <!-- Script here -->
+    </asp:ContentPlaceHolder>
+</body>
+</html>
